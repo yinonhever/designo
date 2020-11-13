@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="classes">
     <Logo />
     <img
       class="header__nav-toggle"
@@ -7,7 +7,7 @@
       alt="nav-toggle"
       @click="toggleNavigation"
     />
-    <div :class="navClasses">
+    <div class="header__navigation">
       <div class="header__nav-list">
         <a class="header__nav-link" href="/about">Our company</a>
         <a class="header__nav-link" href="/locations">Locations</a>
@@ -25,8 +25,8 @@ export default {
     };
   },
   computed: {
-    navClasses() {
-      return this.navOpen ? "header__navigation active" : "header__navigation";
+    classes() {
+      return this.navOpen ? "header active" : "header";
     },
     togglerIcon() {
       return this.navOpen
@@ -37,6 +37,13 @@ export default {
   methods: {
     toggleNavigation() {
       this.navOpen = !this.navOpen;
+    },
+    closeNavigation() {
+      this.navOpen = false;
+    },
+  },
+  watch: {
+    navOpen() {
       document.querySelector("body").style.overflow = this.navOpen
         ? "hidden"
         : null;

@@ -13,7 +13,6 @@
     <section class="portfolio-links-row">
       <PortfolioPageLink v-for="page in PageLinks" :key="page" :page="page" />
     </section>
-    <h1>{{ pageTitle }}</h1>
   </Page>
 </template>
 
