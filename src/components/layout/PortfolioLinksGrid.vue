@@ -1,7 +1,7 @@
 <template>
   <section class="portfolio-links-grid">
-    <PortfolioLink page="Web Design" />
-    <PortfolioLink page="App Design" />
-    <PortfolioLink page="Graphic Design" />
+    <PortfolioPageLink large page="Web Design" />
+    <PortfolioPageLink page="App Design" />
+    <PortfolioPageLink page="Graphic Design" />
   </section>
 </template>

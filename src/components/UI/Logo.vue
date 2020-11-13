@@ -1,5 +1,5 @@
 <template>
-  <a class="logo-wrapper">
+  <a class="logo-wrapper" href="/">
     <img class="logo" :src="image" alt="Designo" />
   </a>
 </template>

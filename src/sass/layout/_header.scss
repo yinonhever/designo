@@ -71,6 +71,7 @@
       background-color: $color-primary-dark;
       padding: $padding-side-mobile;
       transition: height 0.6s;
+      overflow: hidden;
     }
 
     &__navigation.active &__nav-list {
