@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+.page {
+  padding: 0 $padding-side-desktop;
+
+  @include respond(tablet) {
+    padding: 0 $padding-side-tablet;
+  }
+
+  @include respond(mobile) {
+    padding: 0;
+  }
+}
+
+section {
+  overflow: hidden;
+  position: relative;
+
+  &:not(:first-child) {
+    margin-top: 16rem;
+
+    @include respond(tablet) {
+      margin-top: 12rem;
+    }
+  }
+}

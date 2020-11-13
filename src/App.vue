@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TheHeader />
+  <Home />
+  <CTA />
+  <TheFooter />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from "./components/layout/TheHeader";
+import TheFooter from "./components/layout/TheFooter";
+import CTA from "./components/layout/CTA";
+import Home from "./components/pages/Home";
+import "./sass/main.scss";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TheHeader,
+    TheFooter,
+    CTA,
+    Home,
+  },
+};
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap");
 </style>
