@@ -10,7 +10,7 @@
         :description="work.description"
       />
     </section>
-    <section class="portfolio-links-row">
+    <section class="portfolio-links-grid">
       <PortfolioPageLink v-for="page in PageLinks" :key="page" :page="page" />
     </section>
   </Page>

@@ -1,17 +1,17 @@
 <template>
   <Page title="Home">
     <HomeIntro />
-    <PortfolioLinksGrid />
+    <HomePortfolioLinks />
     <Features />
   </Page>
 </template>
 
 <script>
 import HomeIntro from "../layout/HomeIntro";
-import PortfolioLinksGrid from "../layout/PortfolioLinksGrid";
+import HomePortfolioLinks from "../layout/HomePortfolioLinks";
 import Features from "../layout/Features";
 
 export default {
-  components: { HomeIntro, PortfolioLinksGrid, Features },
+  components: { HomeIntro, HomePortfolioLinks, Features },
 };
 </script>

@@ -7,10 +7,7 @@
 <script>
 export default {
   props: {
-    white: {
-      type: Boolean,
-      default: false,
-    },
+    white: Boolean,
   },
   computed: {
     image() {

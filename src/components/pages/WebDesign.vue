@@ -8,7 +8,7 @@ export default {
     return {
       pageData: {
         pageTitle: "Web Design",
-        pageSubtitle: "App",
+        pageSubtitle: "",
         works: [
           {
             title: "",
