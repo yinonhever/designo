@@ -1,6 +1,22 @@
 .footer {
-  height: 400px;
   background-color: $color-primary-dark;
+  color: #fff;
+  padding: 14.4rem $padding-side-desktop 7.2rem;
   position: relative;
   z-index: 10;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__navigation,
+  &__nav-list {
+    display: flex;
+  }
+}
+
+.page.contact + .footer {
+  padding-top: 7.2rem;
 }

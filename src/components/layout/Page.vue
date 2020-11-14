@@ -1,5 +1,5 @@
 <template>
-  <main class="page">
+  <main :class="classes">
     <slot />
     <CTA v-if="showCTA" />
   </main>
@@ -12,6 +12,9 @@ export default {
   components: { CTA },
   props: ["title"],
   computed: {
+    classes() {
+      return this.title === "Contact" ? "page contact" : "page";
+    },
     showCTA() {
       return this.title !== "Contact";
     },
