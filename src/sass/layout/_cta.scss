@@ -1,8 +1,81 @@
 .cta {
-  height: 292px;
   background-color: $color-primary-peach;
   border-radius: 1.5rem;
-  margin-bottom: -7rem;
+  margin-bottom: -7.5rem;
+  padding: 7.2rem 6.6vw;
+  color: #fff;
   position: relative;
   z-index: 20;
+
+  @include respond(tablet) {
+    padding: 5.7rem 5.9rem;
+    text-align: center;
+  }
+
+  @include respond(mobile) {
+    padding: 6.4rem $padding-side-mobile;
+  }
+
+  &__bg {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 87.6rem;
+
+    @include respond(tablet) {
+      right: initial;
+      left: 0;
+    }
+
+    @include respond(mobile) {
+      left: 60%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    @include respond(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    width: 46rem;
+
+    @include respond(tablet-land) {
+      width: 32vw;
+    }
+
+    @include respond(tablet) {
+      width: 100%;
+      max-width: 47.5rem;
+      margin: 0 auto 3.2rem;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    line-height: 4rem;
+    letter-spacing: initial;
+    width: 27rem;
+    margin-bottom: 2.5rem;
+
+    @include respond(tablet) {
+      width: 100%;
+      max-width: 33.5rem;
+      margin: 0 auto 2.5rem;
+    }
+
+    @include respond(mobile) {
+      font-size: 3.2rem;
+      line-height: 3.6rem;
+    }
+  }
 }

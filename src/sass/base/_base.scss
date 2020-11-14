@@ -39,3 +39,8 @@ section {
     }
   }
 }
+
+::selection {
+  background-color: $color-primary-peach;
+  color: #fff;
+}
