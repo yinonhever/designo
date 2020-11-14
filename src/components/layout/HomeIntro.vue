@@ -9,9 +9,9 @@
         responsive websites, app design, and engaging brand experiences. Find
         out more about our services.
       </p>
-      <a href="/about">
+      <RouterLink to="/about">
         <BaseButton>Learn More</BaseButton>
-      </a>
+      </RouterLink>
     </div>
     <img
       class="home-intro__bg"

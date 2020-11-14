@@ -13,9 +13,9 @@
           our expertise can help your business grow.
         </p>
       </div>
-      <a href="/contact">
+      <RouterLink to="/contact">
         <BaseButton narrow>Get in touch</BaseButton>
-      </a>
+      </RouterLink>
     </div>
   </section>
 </template>

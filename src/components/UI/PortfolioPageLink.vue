@@ -1,5 +1,5 @@
 <template>
-  <a :class="classes" :href="link">
+  <RouterLink :class="classes" :to="link">
     <picture>
       <source
         :srcset="tabletImage"
@@ -19,7 +19,7 @@
         />
       </div>
     </div>
-  </a>
+  </RouterLink>
 </template>
 
 <script>

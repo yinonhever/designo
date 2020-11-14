@@ -1,21 +1,16 @@
 <template>
   <TheHeader />
-  <Home />
+  <RouterView />
   <TheFooter />
 </template>
 
 <script>
 import TheHeader from "./components/layout/TheHeader";
 import TheFooter from "./components/layout/TheFooter";
-import Home from "./components/pages/Home";
 import "./sass/main.scss";
 
 export default {
-  components: {
-    TheHeader,
-    TheFooter,
-    Home,
-  },
+  components: { TheHeader, TheFooter },
 };
 </script>
 

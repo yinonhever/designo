@@ -1,24 +1,21 @@
 <template>
   <header :class="classes">
-    <Logo />
+    <Logo @clicked="closeNavigation" />
     <img
       class="header__nav-toggle"
       :src="togglerIcon"
       alt="nav-toggle"
       @click="toggleNavigation"
     />
-    <div class="header__navigation">
-      <div class="header__nav-list">
-        <a class="header__nav-link" href="/about">Our company</a>
-        <a class="header__nav-link" href="/locations">Locations</a>
-        <a class="header__nav-link" href="/contact">Contact</a>
-      </div>
-    </div>
+    <TheNavigation @item-clicked="closeNavigation" />
   </header>
 </template>
 
 <script>
+import TheNavigation from "../UI/TheNavigation";
+
 export default {
+  components: { TheNavigation },
   data() {
     return {
       navOpen: false,
