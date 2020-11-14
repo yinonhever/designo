@@ -32,5 +32,10 @@ section {
     @include respond(tablet) {
       margin-top: 12rem;
     }
+
+    @include respond(mobile) {
+      margin-left: $padding-side-mobile;
+      margin-right: $padding-side-mobile;
+    }
   }
 }
