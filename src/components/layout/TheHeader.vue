@@ -43,11 +43,16 @@ export default {
     },
   },
   watch: {
-    navOpen() {
-      document.querySelector("body").style.overflow = this.navOpen
-        ? "hidden"
-        : null;
+    navOpen(value) {
+      document.querySelector("body").style.overflow = value ? "hidden" : null;
     },
+  },
+  mounted() {
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 700) {
+        this.navOpen = false;
+      }
+    });
   },
 };
 </script>
