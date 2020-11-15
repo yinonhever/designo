@@ -3,8 +3,6 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
   grid-row-gap: 2.4rem;
-  // max-width: 1115px;
-  margin: auto;
 
   @include respond(tablet) {
     grid-template-columns: 1fr;
