@@ -13,9 +13,6 @@ import Contact from "./components/pages/Contact";
 import Page from "./components/layout/Page";
 import BaseButton from "./components/UI/BaseButton";
 import PortfolioTemplate from "./components/layout/PortfolioTemplate";
-import PortfolioPageLink from "./components/UI/PortfolioPageLink";
-import Logo from "./components/UI/Logo";
-import LocationLinks from "./components/layout/LocationLinks";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -37,8 +34,5 @@ app.use(router);
 app.component("Page", Page);
 app.component("PortfolioTemplate", PortfolioTemplate);
 app.component("BaseButton", BaseButton);
-app.component("Logo", Logo);
-app.component("PortfolioPageLink", PortfolioPageLink);
-app.component("LocationLinks", LocationLinks);
 
 app.mount("#app");

@@ -5,15 +5,98 @@
   position: relative;
   z-index: 10;
 
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  @include respond(tablet) {
+    padding: 16.6rem $padding-side-tablet 8rem;
   }
 
-  &__navigation,
-  &__nav-list {
+  @include respond(mobile-land) {
+    text-align: center;
+  }
+
+  @include respond(mobile) {
+    padding: 25.3rem $padding-side-mobile 6.4rem;
+  }
+
+  &__top {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, max-content);
+
+    @include respond(mobile-land) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__navigation {
+    @include respond(mobile-land) {
+      display: block;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__seperator {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #fff;
+    opacity: 0.1;
+    margin: 4rem 0 3.1rem;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
+
+  &__bottom {
     display: flex;
+
+    @include respond(mobile-land) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__column {
+    width: 24.5vw;
+    margin-right: 3rem;
+
+    @include respond(tablet) {
+      width: 29vw;
+      margin-right: 1rem;
+    }
+
+    @include respond(mobile-land) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__text {
+    color: rgba(#fff, 0.5);
+
+    &--strong {
+      font-weight: 600;
+    }
+  }
+
+  &__social {
+    margin-left: auto;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+
+    @include respond(mobile-land) {
+      align-self: center;
+      margin-left: 0;
+    }
+  }
+
+  &__social-link {
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
   }
 }
 

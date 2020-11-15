@@ -5,3 +5,10 @@
     <PortfolioPageLink page="Graphic Design" />
   </section>
 </template>
+
+<script>
+import PortfolioPageLink from "../UI/PortfolioPageLink";
+export default {
+  components: { PortfolioPageLink },
+};
+</script>

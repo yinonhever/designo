@@ -1,53 +1,58 @@
 <template>
   <header :class="classes">
-    <Logo @clicked="closeNavigation" />
+    <Logo @clicked="closeMobileMenu" />
     <img
       class="header__nav-toggle"
       :src="togglerIcon"
       alt="nav-toggle"
-      @click="toggleNavigation"
+      @click="toggleMobileMenu"
     />
-    <TheNavigation @item-clicked="closeNavigation" />
+    <nav class="navigation header__navigation">
+      <div class="header__nav-list">
+        <NavigationItems location="header" @item-clicked="closeMobileMenu" />
+      </div>
+    </nav>
   </header>
 </template>
 
 <script>
-import TheNavigation from "../UI/TheNavigation";
+import Logo from "../UI/Logo";
+import NavigationItems from "../UI/NavigationItems";
 
 export default {
-  components: { TheNavigation },
+  components: { Logo, NavigationItems },
   data() {
     return {
-      navOpen: false,
+      mobileMenuOpen: false,
     };
   },
   computed: {
     classes() {
-      return this.navOpen ? "header active" : "header";
+      return this.mobileMenuOpen ? "header active" : "header";
     },
     togglerIcon() {
-      return this.navOpen
+      return this.mobileMenuOpen
         ? "/assets/shared/mobile/icon-close.svg"
         : "/assets/shared/mobile/icon-hamburger.svg";
     },
   },
   methods: {
-    toggleNavigation() {
-      this.navOpen = !this.navOpen;
+    toggleMobileMenu() {
+      this.mobileMenuOpen = !this.mobileMenuOpen;
     },
-    closeNavigation() {
-      this.navOpen = false;
+    closeMobileMenu() {
+      this.mobileMenuOpen = false;
     },
   },
   watch: {
-    navOpen(value) {
+    mobileMenuOpen(value) {
       document.querySelector("body").style.overflow = value ? "hidden" : null;
     },
   },
   mounted() {
     window.addEventListener("resize", () => {
       if (window.innerWidth > 700) {
-        this.navOpen = false;
+        this.mobileMenuOpen = false;
       }
     });
   },

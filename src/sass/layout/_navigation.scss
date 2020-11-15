@@ -1,0 +1,27 @@
+.navigation {
+  display: flex;
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+
+  &:hover {
+    color: $color-primary-peach;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4.2rem;
+  }
+
+  @include respond(mobile-land) {
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 3.2rem;
+    }
+  }
+}

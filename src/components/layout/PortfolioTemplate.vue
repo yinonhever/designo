@@ -11,7 +11,7 @@
       />
     </section>
     <section class="portfolio-links-grid">
-      <PortfolioPageLink v-for="page in PageLinks" :key="page" :page="page" />
+      <PortfolioPageLink v-for="page in pageLinks" :key="page" :page="page" />
     </section>
   </Page>
 </template>
@@ -19,9 +19,10 @@
 <script>
 import PortfolioHeader from "../layout/PortfolioHeader";
 import PortfolioWork from "../UI/PortfolioWork";
+import PortfolioPageLink from "../UI/PortfolioPageLink";
 
 export default {
-  components: { PortfolioHeader, PortfolioWork },
+  components: { PortfolioHeader, PortfolioWork, PortfolioPageLink },
   props: ["pageTitle", "pageSubtitle", "works", "pageLinks"],
 };
 </script>
