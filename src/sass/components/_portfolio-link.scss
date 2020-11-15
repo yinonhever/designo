@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
   grid-row-gap: 2.4rem;
-  max-width: 1115px;
+  // max-width: 1115px;
   margin: auto;
 
   @include respond(tablet) {
@@ -48,6 +48,18 @@
     @include respond(tablet) {
       height: initial;
       width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1450px) {
+    &__img {
+      height: initial;
+      width: 100%;
+    }
+
+    &--large ~ & &__img {
+      height: 100%;
+      width: initial;
     }
   }
 
