@@ -25,7 +25,7 @@ const router = createRouter({
         { path: "/locations", component: Locations },
         { path: "/contact", component: Contact }
     ]
-})
+});
 
 const app = createApp(App);
 

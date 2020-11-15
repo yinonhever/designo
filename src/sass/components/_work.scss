@@ -1,0 +1,59 @@
+.work {
+  border-radius: 1.5rem;
+  background-color: #fdf3f0;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $color-primary-peach;
+    color: #fff;
+  }
+
+  @include respond(tablet-land) {
+    display: flex;
+  }
+
+  @include respond(mobile) {
+    display: block;
+  }
+
+  &__img {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+
+    @include respond(tablet-land) {
+      border-radius: 1.5rem 0 0 1.5rem;
+      width: 50%;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+      border-radius: 1.5rem 1.5rem 0 0;
+    }
+  }
+
+  &__content {
+    padding: 3.2rem;
+
+    @include respond(tablet-land) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include respond(mobile) {
+      padding: 2.95rem;
+    }
+  }
+
+  &__title {
+    color: $color-primary-peach;
+    margin-bottom: 1rem;
+    transition: all 0.5s;
+  }
+
+  &:hover &__title {
+    color: #fff;
+  }
+}

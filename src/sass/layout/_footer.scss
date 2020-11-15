@@ -26,7 +26,6 @@
     @include respond(mobile-land) {
       display: flex;
       flex-direction: column;
-      justify-content: center;
     }
   }
 
@@ -102,4 +101,11 @@
 
 .page.contact + .footer {
   padding-top: 7.2rem;
+
+  @include respond(tablet) {
+    padding-top: 8rem;
+  }
+  @include respond(mobile) {
+    padding-top: 6.4rem;
+  }
 }

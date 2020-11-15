@@ -5,7 +5,9 @@
     :to="item.link"
     :class="`nav-link ${location}__nav-link`"
   >
-    <span @click="$emit('item-clicked')">{{ item.text }}</span>
+    <span @click="$emit('item-clicked')">
+      {{ item.text }}
+    </span>
   </RouterLink>
 </template>
 

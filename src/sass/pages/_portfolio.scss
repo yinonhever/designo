@@ -1,0 +1,77 @@
+// PORTFOLIO HEADER SECTION
+.portfolio-header {
+  background-color: $color-primary-peach;
+  color: #fff;
+  border-radius: 1.5rem;
+  padding: 6.4rem $padding-side-mobile;
+  text-align: center;
+  z-index: 1;
+
+  @include respond(mobile) {
+    border-radius: initial;
+    padding: 10.5rem $padding-side-mobile;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 35rem;
+    margin: auto;
+  }
+
+  &__heading {
+    color: #fff;
+    margin-bottom: 2.4rem;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80rem;
+
+    @include respond(tablet) {
+      left: 0 !important;
+      right: initial !important;
+    }
+
+    @include respond(mobile) {
+      left: initial !important;
+      right: 0 !important;
+      top: 0;
+      transform: none;
+      width: 85rem;
+    }
+  }
+}
+
+// WORKS GRID SECTION
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 3rem;
+  grid-row-gap: 3.2rem;
+  overflow: initial;
+
+  @include respond(tablet-land) {
+    grid-template-columns: 1fr;
+  }
+
+  .work {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__bg {
+    position: absolute;
+    left: -#{$padding-side-desktop};
+    top: -28.6rem;
+    width: 70vw;
+    min-width: 90rem;
+    max-width: 120rem;
+
+    @include respond(tablet-land) {
+      display: none;
+    }
+  }
+}

@@ -1,17 +1,21 @@
 <template>
   <Page title="Home">
     <HomeIntro />
-    <HomePortfolioLinks />
+    <section class="portfolio-links-grid">
+      <PortfolioPageLink page="Web Design" large />
+      <PortfolioPageLink page="App Design" />
+      <PortfolioPageLink page="Graphic Design" />
+    </section>
     <Features />
   </Page>
 </template>
 
 <script>
 import HomeIntro from "../layout/HomeIntro";
-import HomePortfolioLinks from "../layout/HomePortfolioLinks";
+import PortfolioPageLink from "../UI/PortfolioPageLink";
 import Features from "../layout/Features";
 
 export default {
-  components: { HomeIntro, HomePortfolioLinks, Features },
+  components: { HomeIntro, PortfolioPageLink, Features },
 };
 </script>

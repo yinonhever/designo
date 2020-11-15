@@ -1,15 +1,7 @@
 <template>
   <Page :title="pageTitle">
     <PortfolioHeader :title="pageTitle" :subtitle="pageSubtitle" />
-    <section class="works-grid">
-      <PortfolioWork
-        v-for="work in works"
-        :key="work.title"
-        :image="work.image"
-        :title="work.title"
-        :description="work.description"
-      />
-    </section>
+    <PortfolioWorksGrid :works="works" />
     <section class="portfolio-links-grid">
       <PortfolioPageLink v-for="page in pageLinks" :key="page" :page="page" />
     </section>
@@ -18,11 +10,16 @@
 
 <script>
 import PortfolioHeader from "../layout/PortfolioHeader";
-import PortfolioWork from "../UI/PortfolioWork";
+import PortfolioWorksGrid from "../layout/PortfolioWorksGrid";
 import PortfolioPageLink from "../UI/PortfolioPageLink";
 
 export default {
-  components: { PortfolioHeader, PortfolioWork, PortfolioPageLink },
-  props: ["pageTitle", "pageSubtitle", "works", "pageLinks"],
+  components: { PortfolioHeader, PortfolioWorksGrid, PortfolioPageLink },
+  props: {
+    pageTitle: String,
+    pageSubtitle: String,
+    works: Array,
+    pageLinks: Array,
+  },
 };
 </script>

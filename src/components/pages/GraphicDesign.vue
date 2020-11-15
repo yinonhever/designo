@@ -8,37 +8,25 @@ export default {
     return {
       pageData: {
         pageTitle: "Graphic Design",
-        pageSubtitle: "",
+        pageSubtitle:
+          "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
         works: [
           {
-            title: "",
-            image: "",
-            description: "",
+            title: "Tim Brown",
+            image: "/assets/graphic-design/desktop/image-change.jpg",
+            description:
+              "A book cover designed for Tim Brown’s new release, ‘Change’",
           },
           {
-            title: "",
-            image: "",
-            description: "",
+            title: "Boxed Water",
+            image: "/assets/graphic-design/desktop/image-boxed-water.jpg",
+            description: "A simple packaging concept made for Boxed Water",
           },
           {
-            title: "",
-            image: "",
-            description: "",
-          },
-          {
-            title: "",
-            image: "",
-            description: "",
-          },
-          {
-            title: "",
-            image: "",
-            description: "",
-          },
-          {
-            title: "",
-            image: "",
-            description: "",
+            title: "Science!",
+            image: "/assets/graphic-design/desktop/image-science.jpg",
+            description:
+              "A poster made in collaboration with the Federal Art Project",
           },
         ],
         pageLinks: ["Web Design", "App Design"],
