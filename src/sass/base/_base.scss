@@ -10,6 +10,10 @@ html {
   font-size: 62.5%; // 1rem = 10px
 }
 
+#app {
+  overflow: hidden;
+}
+
 .page {
   padding: 0 $padding-side-desktop;
 

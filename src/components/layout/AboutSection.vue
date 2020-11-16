@@ -1,5 +1,5 @@
 <template>
-  <section :class="classes">
+  <section :class="classes" :id="id">
     <picture>
       <source
         :srcset="img.tablet"
@@ -30,12 +30,19 @@
         :style="bgImgDesktop.position"
       />
     </picture>
+    <img
+      v-if="id === 'worldclass'"
+      class="about-section__external-bg"
+      src="/assets/shared/desktop/bg-pattern-leaf.svg"
+      alt="pattern-leaf"
+    />
   </section>
 </template>
 
 <script>
 export default {
   props: {
+    id: String,
     title: String,
     text: Array,
     img: Object,

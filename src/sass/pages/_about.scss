@@ -95,4 +95,10 @@
       bottom: initial !important;
     }
   }
+
+  &#worldclass &__external-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

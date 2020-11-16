@@ -6,6 +6,7 @@
       <div class="header__nav-list">
         <NavigationItems location="header" @item-clicked="closeMobileMenu" />
       </div>
+      <div class="header__nav-backdrop" @click="closeMobileMenu" />
     </nav>
   </header>
 </template>

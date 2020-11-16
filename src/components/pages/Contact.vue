@@ -1,5 +1,5 @@
 <template>
-  <Page title="Contact">
+  <Page title="Contact" id="contact">
     <PageIntro page="contact" :title="title" :text="introText" />
     <LocationLinks />
   </Page>

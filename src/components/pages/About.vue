@@ -1,5 +1,5 @@
 <template>
-  <Page title="About">
+  <Page title="About" id="about">
     <PageIntro page="about" :title="title" :text="introText" />
     <AboutSection v-bind="aboutSections[0]" />
     <LocationLinks />
@@ -26,6 +26,7 @@ export default {
       `,
       aboutSections: [
         {
+          id: "worldclass",
           title: "World-class talent",
           img: {
             desktop: "/assets/about/desktop/image-world-class-talent.jpg",
@@ -50,6 +51,7 @@ export default {
           reversed: false,
         },
         {
+          id: "realdeal",
           title: "The real deal",
           img: {
             desktop: "/assets/about/desktop/image-real-deal.jpg",
