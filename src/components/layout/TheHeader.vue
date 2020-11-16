@@ -1,12 +1,7 @@
 <template>
   <header :class="classes">
     <Logo @clicked="closeMobileMenu" />
-    <img
-      class="header__nav-toggle"
-      :src="togglerIcon"
-      alt="nav-toggle"
-      @click="toggleMobileMenu"
-    />
+    <NavToggle @clicked="toggleMobileMenu" />
     <nav class="navigation header__navigation">
       <div class="header__nav-list">
         <NavigationItems location="header" @item-clicked="closeMobileMenu" />
@@ -17,10 +12,11 @@
 
 <script>
 import Logo from "../UI/Logo";
+import NavToggle from "../UI/NavToggle";
 import NavigationItems from "../UI/NavigationItems";
 
 export default {
-  components: { Logo, NavigationItems },
+  components: { Logo, NavToggle, NavigationItems },
   data() {
     return {
       mobileMenuOpen: false,
@@ -29,11 +25,6 @@ export default {
   computed: {
     classes() {
       return this.mobileMenuOpen ? "header active" : "header";
-    },
-    togglerIcon() {
-      return this.mobileMenuOpen
-        ? "/assets/shared/mobile/icon-close.svg"
-        : "/assets/shared/mobile/icon-hamburger.svg";
     },
   },
   methods: {
