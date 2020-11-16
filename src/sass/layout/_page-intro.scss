@@ -22,11 +22,9 @@
   }
 
   &__content {
-    flex: 1;
     padding: 0 5.7vw 0 6.6vw;
 
     @include respond(tablet-land) {
-      flex: initial;
       padding: 6.4rem 7.5vw;
     }
 

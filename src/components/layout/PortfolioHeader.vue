@@ -10,8 +10,12 @@
     </div>
     <picture>
       <source
-        srcset="/assets/web-design/desktop/bg-pattern-intro-web.svg"
-        media="(max-width: 900px)"
+        srcset="/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+        media="(max-width: 900px) and (min-width: 601px)"
+      />
+      <source
+        srcset="/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
+        media="(max-width: 600px)"
       />
       <img
         class="portfolio-header__bg"

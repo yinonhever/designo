@@ -13,7 +13,11 @@ export default {
   props: ["title"],
   computed: {
     classes() {
-      return this.title === "Contact" ? "page contact" : "page";
+      return this.title === "Contact"
+        ? "page page--contact"
+        : this.title === "About"
+        ? "page page--about"
+        : "page";
     },
     showCTA() {
       return this.title !== "Contact";

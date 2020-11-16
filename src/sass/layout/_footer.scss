@@ -99,7 +99,7 @@
   }
 }
 
-.page.contact + .footer {
+.page--contact + .footer {
   padding-top: 7.2rem;
 
   @include respond(tablet) {
