@@ -101,9 +101,11 @@
 
 #contact + .footer {
   padding-top: 7.2rem;
+  margin-top: 16rem;
 
   @include respond(tablet) {
     padding-top: 8rem;
+    margin-top: 12rem;
   }
   @include respond(mobile) {
     padding-top: 6.4rem;

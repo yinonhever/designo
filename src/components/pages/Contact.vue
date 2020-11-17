@@ -1,7 +1,7 @@
 <template>
   <Page title="Contact" id="contact">
     <PageIntro page="contact" :title="title" :text="introText" />
-    <LocationLinks />
+    <LocationLinks showBgImg />
   </Page>
 </template>
 

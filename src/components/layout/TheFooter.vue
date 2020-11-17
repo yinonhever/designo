@@ -68,7 +68,7 @@ export default {
           icon: "/assets/shared/desktop/icon-twitter.svg",
         },
         {
-          link: "https://facebook.com/pinterest",
+          link: "https://pinterest.com/designo",
           icon: "/assets/shared/desktop/icon-pinterest.svg",
         },
         {

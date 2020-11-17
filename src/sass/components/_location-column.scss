@@ -1,0 +1,44 @@
+.location-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+
+  &__img-wrapper {
+    margin-bottom: 4.8rem;
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__img-bg {
+    width: 20.2rem;
+  }
+
+  &:nth-child(1) &__img-bg {
+    transform: rotate(90deg);
+  }
+
+  &:nth-child(3) &__img-bg {
+    transform: rotate(-90deg);
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+
+  .button {
+    padding: 1.8rem 1.85rem 1.6rem;
+  }
+}

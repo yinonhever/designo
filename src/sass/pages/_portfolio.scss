@@ -3,7 +3,6 @@
   &__container {
     padding: 6.4rem $padding-side-mobile;
     text-align: center;
-    z-index: 1;
 
     @include respond(mobile) {
       border-radius: initial;
@@ -49,7 +48,6 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 3.2rem;
-  overflow: initial;
 
   @include respond(tablet-land) {
     grid-template-columns: 1fr;

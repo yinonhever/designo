@@ -93,7 +93,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   position: relative;
-  overflow: initial;
 
   @include respond(tablet-land) {
     grid-gap: 3.2rem;
@@ -176,7 +175,7 @@
   &__bg {
     position: absolute;
     top: 30%;
-    right: -#{$padding-side-desktop};
+    right: 0;
     transform: rotate(180deg);
     width: 70vw;
     min-width: 100.6rem;

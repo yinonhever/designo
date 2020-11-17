@@ -39,6 +39,7 @@ section {
   border-radius: 1.5rem;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 
   &--strong {
     background-color: $color-primary-peach;
