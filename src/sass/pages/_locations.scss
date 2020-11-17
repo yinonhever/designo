@@ -1,0 +1,140 @@
+.location {
+  display: flex;
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+
+  @include respond(tablet-land) {
+    flex-direction: column-reverse;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3.2rem;
+
+    @include respond(tablet-land) {
+      margin-bottom: 12rem;
+    }
+
+    @include respond(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tablet-land) {
+      padding: 8.8rem 9.5vw;
+      display: block;
+    }
+
+    @include respond(mobile) {
+      border-radius: initial;
+      text-align: center;
+      padding: 8rem $padding-side-mobile;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__heading {
+    letter-spacing: initial;
+    margin-bottom: 2.4rem;
+
+    @include respond(mobile) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+
+    @include respond(tablet-land) {
+      justify-content: space-between;
+    }
+
+    @include respond(mobile) {
+      display: block;
+    }
+  }
+
+  &__column {
+    width: 18vw;
+
+    @include respond(tablet-land) {
+      width: 33.2vw;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+
+      @include respond(mobile) {
+        margin-right: 0;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    & > p:not(:last-child) {
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 700;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40.5vw;
+
+    @include respond(tablet-land) {
+      width: 58.4rem;
+    }
+
+    @include respond(mobile) {
+      top: 0;
+      bottom: initial;
+    }
+  }
+
+  &__map {
+    width: 24.3vw;
+    min-width: 30rem;
+    height: 22.6vw;
+    min-height: 27.9rem;
+    border-radius: 1.5rem;
+    margin-left: 3rem;
+
+    @include respond(tablet-land) {
+      width: 100%;
+      height: 32.5rem;
+      margin-left: 0;
+      margin-right: 0 !important;
+      margin-bottom: 2.4rem;
+    }
+
+    @include respond(mobile) {
+      border-radius: initial;
+      margin-bottom: 0;
+      height: 32rem;
+    }
+  }
+
+  &--reversed &__map {
+    margin-right: 3rem;
+    margin-left: 0;
+  }
+}

@@ -14,8 +14,6 @@ import Page from "./components/layout/Page";
 import BaseButton from "./components/UI/BaseButton";
 import PortfolioTemplate from "./components/layout/PortfolioTemplate";
 
-import "leaflet/dist/leaflet.css";
-
 const router = createRouter({
     history: createWebHistory(),
     routes: [
@@ -26,7 +24,11 @@ const router = createRouter({
         { path: "/about", component: About },
         { path: "/locations", component: Locations },
         { path: "/contact", component: Contact }
-    ]
+    ],
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) return savedPosition;
+        else return { left: 0, top: 0 };
+    }
 });
 
 const app = createApp(App);

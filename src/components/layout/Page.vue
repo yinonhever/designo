@@ -17,7 +17,6 @@ export default {
     },
   },
   mounted() {
-    window.scrollTo(0, 0);
     document.title = this.title ? `${this.title} – Designo` : "Designo";
   },
 };
