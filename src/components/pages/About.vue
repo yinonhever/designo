@@ -1,5 +1,5 @@
 <template>
-  <Page title="About" id="about">
+  <Page title="About">
     <PageIntro page="about" :title="title" :text="introText" />
     <AboutSection v-bind="aboutSections[0]" />
     <LocationLinks />
@@ -49,6 +49,7 @@ export default {
             position: { right: "18%", bottom: 0 },
           },
           reversed: false,
+          showExternalBg: true,
         },
         {
           id: "realdeal",
@@ -73,6 +74,7 @@ export default {
             position: { left: 0, bottom: 0 },
           },
           reversed: true,
+          showExternalBg: false,
         },
       ],
     };

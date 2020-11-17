@@ -1,21 +1,23 @@
 <template>
   <section class="cta" ref="cta">
-    <img
-      class="cta__bg"
-      src="/assets/shared/desktop/bg-pattern-call-to-action.svg"
-      alt="circles-bg"
-    />
-    <div class="cta__container">
-      <div class="cta__content">
-        <h2 class="heading-2 cta__heading">Let’s talk about your project</h2>
-        <p class="paragraph cta__paragraph">
-          Ready to take it to the next level? Contact us today and find out how
-          our expertise can help your business grow.
-        </p>
+    <div class="container container--strong cta__container">
+      <img
+        class="cta__bg"
+        src="/assets/shared/desktop/bg-pattern-call-to-action.svg"
+        alt="circles-bg"
+      />
+      <div class="cta__inner">
+        <div class="cta__content">
+          <h2 class="heading-2 cta__heading">Let’s talk about your project</h2>
+          <p class="paragraph cta__paragraph">
+            Ready to take it to the next level? Contact us today and find out
+            how our expertise can help your business grow.
+          </p>
+        </div>
+        <RouterLink to="/contact">
+          <BaseButton narrow>Get in touch</BaseButton>
+        </RouterLink>
       </div>
-      <RouterLink to="/contact">
-        <BaseButton narrow>Get in touch</BaseButton>
-      </RouterLink>
     </div>
   </section>
 </template>

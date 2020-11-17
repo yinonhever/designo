@@ -1,19 +1,22 @@
 .cta {
-  background-color: $color-primary-peach;
-  border-radius: 1.5rem;
   margin-bottom: -7.5rem;
-  padding: 7.2rem 6.6vw;
-  color: #fff;
-  position: relative;
   z-index: 20;
 
-  @include respond(tablet) {
-    padding: 5.7rem 5.9rem;
-    text-align: center;
+  @include respond(mobile) {
+    padding: 0 $padding-side-mobile;
   }
 
-  @include respond(mobile) {
-    padding: 6.4rem $padding-side-mobile;
+  &__container {
+    padding: 7.2rem 6.6vw;
+
+    @include respond(tablet) {
+      padding: 5.7rem 5.9rem;
+      text-align: center;
+    }
+
+    @include respond(mobile) {
+      padding: 6.4rem $padding-side-mobile;
+    }
   }
 
   &__bg {
@@ -34,7 +37,7 @@
     }
   }
 
-  &__container {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +64,6 @@
   }
 
   &__heading {
-    color: #fff;
     line-height: 4rem;
     letter-spacing: initial;
     width: 27rem;

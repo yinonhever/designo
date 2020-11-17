@@ -1,29 +1,31 @@
 <template>
   <section class="portfolio-header">
-    <div class="portfolio-header__content">
-      <h1 class="heading-1 portfolio-header__heading">
-        {{ title }}
-      </h1>
-      <p class="paragraph portfolio-header__text">
-        {{ subtitle }}
-      </p>
+    <div class="container container--strong portfolio-header__container">
+      <div class="portfolio-header__content">
+        <h1 class="heading-1 portfolio-header__heading">
+          {{ title }}
+        </h1>
+        <p class="paragraph portfolio-header__text">
+          {{ subtitle }}
+        </p>
+      </div>
+      <picture>
+        <source
+          srcset="/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
+          media="(max-width: 900px) and (min-width: 601px)"
+        />
+        <source
+          srcset="/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
+          media="(max-width: 600px)"
+        />
+        <img
+          class="portfolio-header__bg"
+          :src="bgImgDesktop"
+          alt="circles-bg"
+          :style="bgPositionDesktop"
+        />
+      </picture>
     </div>
-    <picture>
-      <source
-        srcset="/assets/shared/tablet/bg-pattern-design-pages-intro-tablet.svg"
-        media="(max-width: 900px) and (min-width: 601px)"
-      />
-      <source
-        srcset="/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg"
-        media="(max-width: 600px)"
-      />
-      <img
-        class="portfolio-header__bg"
-        :src="bgImgDesktop"
-        alt="circles-bg"
-        :style="bgPositionDesktop"
-      />
-    </picture>
   </section>
 </template>
 

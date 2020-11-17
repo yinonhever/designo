@@ -7,6 +7,10 @@
   @include respond(tablet) {
     grid-template-columns: 1fr;
   }
+
+  @include respond(mobile) {
+    padding: 0 $padding-side-mobile;
+  }
 }
 
 .portfolio-link {

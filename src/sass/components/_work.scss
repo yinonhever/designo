@@ -1,6 +1,4 @@
 .work {
-  border-radius: 1.5rem;
-  background-color: #fdf3f0;
   text-align: center;
   cursor: pointer;
   transition: all 0.5s;
@@ -21,6 +19,7 @@
   &__img {
     border-radius: 1.5rem 1.5rem 0 0;
     width: 100%;
+    display: block;
 
     @include respond(tablet-land) {
       border-radius: 1.5rem 0 0 1.5rem;
@@ -48,7 +47,6 @@
   }
 
   &__title {
-    color: $color-primary-peach;
     margin-bottom: 1rem;
     transition: all 0.5s;
   }

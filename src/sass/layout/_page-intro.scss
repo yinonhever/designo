@@ -1,18 +1,18 @@
 .page-intro {
-  display: flex;
-  align-items: center;
-  background-color: $color-primary-peach;
-  color: #fff;
-  border-radius: 1.5rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    z-index: 1;
 
-  @include respond(tablet-land) {
-    flex-direction: column-reverse;
-    align-items: stretch;
-    text-align: center;
-  }
+    @include respond(tablet-land) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+      text-align: center;
+    }
 
-  @include respond(mobile) {
-    border-radius: initial;
+    @include respond(mobile) {
+      border-radius: initial;
+    }
   }
 
   &__content,

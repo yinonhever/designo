@@ -14,7 +14,8 @@ html {
   overflow: hidden;
 }
 
-.page {
+section {
+  position: relative;
   padding: 0 $padding-side-desktop;
 
   @include respond(tablet) {
@@ -24,11 +25,6 @@ html {
   @include respond(mobile) {
     padding: 0;
   }
-}
-
-section {
-  overflow: hidden;
-  position: relative;
 
   &:not(:first-child) {
     margin-top: 16rem;
@@ -36,10 +32,32 @@ section {
     @include respond(tablet) {
       margin-top: 12rem;
     }
+  }
+}
 
-    @include respond(mobile) {
-      margin-left: $padding-side-mobile;
-      margin-right: $padding-side-mobile;
+.container {
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+
+  &--strong {
+    background-color: $color-primary-peach;
+    color: #fff;
+
+    h1,
+    h2,
+    h3 {
+      color: #fff;
+    }
+  }
+
+  &--light {
+    background-color: #fdf3f0;
+
+    h1,
+    h2,
+    h3 {
+      color: $color-primary-peach;
     }
   }
 }

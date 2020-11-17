@@ -1,5 +1,5 @@
 <template>
-  <main class="page" :id="id">
+  <main :id="id">
     <slot />
     <CTA v-if="showCTA" />
   </main>
@@ -13,7 +13,7 @@ export default {
   props: ["id", "title"],
   computed: {
     showCTA() {
-      return this.title !== "Contact";
+      return this.id !== "contact";
     },
   },
   mounted() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="work">
+  <div class="work container container--light">
     <img class="work__img" :src="image" :alt="title" />
     <div class="work__content">
       <h3 class="heading-3 work__title">{{ title }}</h3>

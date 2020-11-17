@@ -1,20 +1,19 @@
 // INTRO SECTION
 .home-intro {
-  background-color: $color-primary-peach;
-  padding: 14.5rem 9.5rem;
-  border-radius: 1.5rem;
-  color: #fff;
+  &__container {
+    padding: 14.5rem 9.5rem;
 
-  @include respond(tablet-land) {
-    padding: 8rem 5.8rem 45.7rem;
-  }
+    @include respond(tablet-land) {
+      padding: 8rem 5.8rem 45.7rem;
+    }
 
-  @include respond(mobile) {
-    padding: 8rem $padding-side-mobile 45.1rem;
-  }
+    @include respond(mobile) {
+      padding: 8rem $padding-side-mobile 45.1rem;
+    }
 
-  @include respond(mobile) {
-    border-radius: initial;
+    @include respond(mobile) {
+      border-radius: initial;
+    }
   }
 
   &__content {
@@ -33,7 +32,6 @@
   }
 
   &__heading {
-    color: #fff;
     margin-bottom: 2.5rem;
   }
 
@@ -106,6 +104,7 @@
   @include respond(mobile) {
     grid-gap: 8rem;
     text-align: center;
+    padding: 0 $padding-side-mobile;
   }
 
   &__item {
