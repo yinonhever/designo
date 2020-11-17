@@ -27,7 +27,7 @@ export default {
   mounted() {
     const adjustPlacement = () => {
       const ctaSection = this.$refs.cta;
-      if (window.innerWidth < 600) {
+      if (ctaSection && window.innerWidth < 600) {
         ctaSection.style.marginBottom = `-${ctaSection.offsetHeight / 2}px`;
       } else {
         ctaSection.style.marginBottom = null;

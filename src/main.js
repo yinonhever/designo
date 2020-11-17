@@ -14,6 +14,8 @@ import Page from "./components/layout/Page";
 import BaseButton from "./components/UI/BaseButton";
 import PortfolioTemplate from "./components/layout/PortfolioTemplate";
 
+import "leaflet/dist/leaflet.css";
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [

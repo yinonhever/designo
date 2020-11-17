@@ -43,7 +43,7 @@ export default {
   },
   mounted() {
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 700) {
+      if (window.innerWidth > 700 && this.mobileMenuOpen) {
         this.mobileMenuOpen = false;
       }
     });
