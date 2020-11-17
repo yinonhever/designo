@@ -10,7 +10,9 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "leaflet": "^1.7.1",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
     "vue": "^3.0.0",
+    "vue-performance": "^1.0.0",
     "vue-router": "^4.0.0-rc.3",
     "vue2-leaflet": "^2.6.0"
   },
@@ -20,8 +22,8 @@
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
+    "eslint": "^6.7.",
+    "eslint-plugin-vue": "^7.0.02-0",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2"
   }
