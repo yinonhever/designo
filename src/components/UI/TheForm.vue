@@ -31,7 +31,7 @@
         name="phone"
         placeholder="Phone"
         aria-label="Phone"
-        :value="formData.phone"
+        v-model="formData.phone"
       />
     </div>
     <div class="form__input-wrapper form__input-wrapper--message">
@@ -95,6 +95,7 @@ export default {
 
       if (this.isFormValid) {
         this.$emit("success");
+        console.log(this.formData);
         this.resetForm();
       }
     },

@@ -13,8 +13,8 @@
 
 <script>
 export default {
-  emits: ["item-clicked"],
   props: ["location"],
+  emits: ["item-clicked"],
   data() {
     return {
       items: [

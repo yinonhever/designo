@@ -1,7 +1,7 @@
 <template>
   <header :class="classes">
     <Logo @clicked="closeMobileMenu" />
-    <NavToggle @clicked="toggleMobileMenu" />
+    <NavToggle @click="toggleMobileMenu" />
     <nav class="navigation header__navigation">
       <div class="header__nav-list">
         <NavigationItems location="header" @item-clicked="closeMobileMenu" />
