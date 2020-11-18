@@ -1,0 +1,83 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+
+  &__input-wrapper {
+    margin-bottom: 2.5rem;
+    height: 3.8rem;
+    position: relative;
+
+    &--message {
+      height: 10.2rem;
+
+      @include respond(mobile) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    padding: 0 1.6rem 1.2rem;
+    outline: none;
+    resize: none;
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s;
+
+    &::placeholder {
+      color: rgba(#fff, 0.5);
+    }
+
+    &:focus {
+      border-color: #fff;
+    }
+  }
+
+  .button {
+    padding: 1.7rem 4.75rem;
+    align-self: flex-end;
+
+    @include respond(mobile) {
+      align-self: center;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 2.6rem;
+
+    img {
+      display: block;
+      margin-left: 0.8rem;
+    }
+  }
+}

@@ -46,7 +46,6 @@ export default {
           tablet: "/assets/about/tablet/image-about-hero.jpg",
           mobile: "/assets/about/mobile/image-about-hero.jpg",
         };
-      else if (this.page === "contact") return {};
       else return null;
     },
     bgImg() {
@@ -55,7 +54,11 @@ export default {
           desktop: "/assets/about/desktop/bg-pattern-hero-about-desktop.svg",
           mobile: "/assets/about/mobile/bg-pattern-hero-about-mobile.svg",
         };
-      else if (this.page === "contact") return {};
+      else if (this.page === "contact")
+        return {
+          desktop: "/assets/contact/desktop/bg-pattern-hero-desktop.svg",
+          mobile: "/assets/contact/mobile/bg-pattern-hero-contact-mobile.svg",
+        };
       else return null;
     },
   },

@@ -49,7 +49,6 @@ export default {
             position: { right: "18%", bottom: 0 },
           },
           reversed: false,
-          showExternalBg: true,
         },
         {
           id: "realdeal",
@@ -74,7 +73,6 @@ export default {
             position: { left: 0, bottom: 0 },
           },
           reversed: true,
-          showExternalBg: false,
         },
       ],
     };

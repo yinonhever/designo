@@ -5,19 +5,15 @@
         <h2 class="heading-2 location__heading">{{ title }}</h2>
         <div class="location__details">
           <div class="location__column">
-            <p class="location__subtitle">{{ officeName }}</p>
-            <p
-              v-for="line in address"
-              :key="line"
-              class="paragraph location__line"
-            >
+            <p class="paragraph location__subtitle">{{ officeName }}</p>
+            <p v-for="line in address" :key="line" class="paragraph">
               {{ line }}
             </p>
           </div>
           <div class="location__column">
             <p class="paragraph location__subtitle">Contact</p>
-            <p v-if="phone" class="paragraph">P : {{ phone }}</p>
-            <p v-if="email" class="paragraph">M : {{ email }}</p>
+            <p class="paragraph">P : {{ phone }}</p>
+            <p class="paragraph">M : {{ email }}</p>
           </div>
         </div>
       </div>
