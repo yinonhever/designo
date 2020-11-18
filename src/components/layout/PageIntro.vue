@@ -7,10 +7,7 @@
           {{ text }}
         </p>
       </div>
-      <TheContactForm
-        v-if="showContactForm"
-        @success="$emit('form-submitted')"
-      />
+      <TheForm v-if="showContactForm" @success="$emit('form-submitted')" />
       <picture v-else-if="img">
         <source
           :srcset="img.tablet"
@@ -28,10 +25,10 @@
 </template>
 
 <script>
-import TheContactForm from "../UI/TheContactForm";
+import TheForm from "../UI/TheForm";
 
 export default {
-  components: { TheContactForm },
+  components: { TheForm },
   props: ["page", "title", "text"],
   computed: {
     classes() {

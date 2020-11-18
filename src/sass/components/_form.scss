@@ -79,5 +79,33 @@
       display: block;
       margin-left: 0.8rem;
     }
+
+    &.v-enter-from {
+      opacity: 0;
+      transform: translateX(150%);
+    }
+
+    &.v-enter-active {
+      transition: all 0.5s;
+    }
+
+    &.v-enter-to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &.v-leave-from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &.v-leave-active {
+      transition: all 0.5s;
+    }
+
+    &.v-leave-to {
+      opacity: 0;
+      transform: translateX(150%);
+    }
   }
 }

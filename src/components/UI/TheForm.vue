@@ -9,7 +9,7 @@
         placeholder="Name"
         @input="validateOnChange"
       />
-      <FormError v-if="errors.name && shouldValidate.name">
+      <FormError :show="errors.name && shouldValidate.name">
         {{ errors.name }}
       </FormError>
     </div>
@@ -22,7 +22,7 @@
         placeholder="Email Address"
         @input="validateOnChange"
       />
-      <FormError v-if="errors.email && shouldValidate.email">
+      <FormError :show="errors.email && shouldValidate.email">
         {{ errors.email }}
       </FormError>
     </div>
@@ -43,7 +43,7 @@
         placeholder="Your Message"
         @input="validateOnChange"
       />
-      <FormError v-if="errors.message && shouldValidate.message">
+      <FormError :show="errors.message && shouldValidate.message">
         {{ errors.message }}
       </FormError>
     </div>
