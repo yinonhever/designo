@@ -2,7 +2,7 @@
   <form class="form" @submit.prevent="submitHandler">
     <div class="form__input-wrapper">
       <input
-        v-model="formData.name"
+        :value="formData.name"
         class="form__input"
         type="text"
         name="name"
@@ -13,7 +13,7 @@
     </div>
     <div class="form__input-wrapper">
       <input
-        v-model="formData.email"
+        :value="formData.email"
         class="form__input"
         type="text"
         name="email"
@@ -24,7 +24,7 @@
     </div>
     <div class="form__input-wrapper">
       <input
-        v-model="formData.phone"
+        :value="formData.phone"
         class="form__input"
         type="tel"
         name="phone"
@@ -33,7 +33,7 @@
     </div>
     <div class="form__input-wrapper form__input-wrapper--message">
       <textarea
-        v-model="formData.message"
+        :value="formData.message"
         class="form__input"
         name="message"
         placeholder="Your Message"
@@ -77,7 +77,9 @@ export default {
   },
   methods: {
     validateOnChange(event) {
-      const { name } = event.target;
+      const { name, value } = event.target;
+      this.formData[name] = value;
+
       if (this.fieldsToValidate.includes(name)) {
         this.updateErrors(name);
       }
