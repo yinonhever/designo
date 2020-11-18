@@ -9,9 +9,7 @@
         placeholder="Name"
         @input="validateOnChange"
       />
-      <FormError :show="errors.name && shouldValidate.name">
-        {{ errors.name }}
-      </FormError>
+      <FormError :show="errors.name">{{ errors.name }}</FormError>
     </div>
     <div class="form__input-wrapper">
       <input
@@ -22,9 +20,7 @@
         placeholder="Email Address"
         @input="validateOnChange"
       />
-      <FormError :show="errors.email && shouldValidate.email">
-        {{ errors.email }}
-      </FormError>
+      <FormError :show="errors.email">{{ errors.email }}</FormError>
     </div>
     <div class="form__input-wrapper">
       <input
@@ -43,9 +39,7 @@
         placeholder="Your Message"
         @input="validateOnChange"
       />
-      <FormError :show="errors.message && shouldValidate.message">
-        {{ errors.message }}
-      </FormError>
+      <FormError :show="errors.message">{{ errors.message }}</FormError>
     </div>
     <BaseButton>Submit</BaseButton>
   </form>
@@ -65,26 +59,11 @@ export default {
         phone: "",
         message: "",
       },
-      shouldValidate: {
-        name: false,
-        email: false,
-        message: false,
-      },
+      errors: {},
+      fieldsToValidate: ["name", "email", "message"],
     };
   },
   computed: {
-    errors() {
-      const errors = {};
-      if (!this.isEmailValid) {
-        errors.email = "Please use a valid email address";
-      }
-      for (let key in this.shouldValidate) {
-        if (this.formData[key].trim() === "") {
-          errors[key] = "Can't be empty";
-        }
-      }
-      return errors;
-    },
     isEmailValid() {
       const re = /\S+@\S+\.\S+/;
       return re.test(this.formData.email);
@@ -98,24 +77,33 @@ export default {
   },
   methods: {
     validateOnChange(event) {
-      this.shouldValidate[event.target.name] = true;
+      const { name } = event.target;
+      if (this.fieldsToValidate.includes(name)) {
+        this.updateErrors(name);
+      }
     },
     submitHandler() {
+      this.fieldsToValidate.forEach((key) => {
+        this.updateErrors(key);
+      });
+
       if (this.isFormValid) {
         this.$emit("success");
         this.resetForm();
+      }
+    },
+    updateErrors(key) {
+      if (this.formData[key].trim() === "") {
+        this.errors[key] = "Can't be empty";
+      } else if (key === "email" && !this.isEmailValid) {
+        this.errors.email = "Please use a valid email address";
       } else {
-        for (let key in this.shouldValidate) {
-          this.shouldValidate[key] = true;
-        }
+        this.errors[key] = null;
       }
     },
     resetForm() {
       for (let key in this.formData) {
         this.formData[key] = "";
-      }
-      for (let key in this.shouldValidate) {
-        this.shouldValidate[key] = false;
       }
     },
   },
