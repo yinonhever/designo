@@ -14,4 +14,6 @@ app.component("Page", Page);
 app.component("PortfolioTemplate", PortfolioTemplate);
 app.component("BaseButton", BaseButton);
 
-app.mount("#app");
+router.isReady().then(() => {
+    app.mount("#app");
+});

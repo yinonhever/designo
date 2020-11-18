@@ -2,41 +2,45 @@
   <form class="form" @submit.prevent="submitHandler">
     <div class="form__input-wrapper">
       <input
-        :value="formData.name"
         class="form__input"
         type="text"
         name="name"
         placeholder="Name"
+        aria-label="Name"
+        :value="formData.name"
         @input="validateOnChange"
       />
       <FormError :show="errors.name">{{ errors.name }}</FormError>
     </div>
     <div class="form__input-wrapper">
       <input
-        :value="formData.email"
         class="form__input"
         type="text"
         name="email"
         placeholder="Email Address"
+        aria-label="Email Address"
+        :value="formData.email"
         @input="validateOnChange"
       />
       <FormError :show="errors.email">{{ errors.email }}</FormError>
     </div>
     <div class="form__input-wrapper">
       <input
-        :value="formData.phone"
         class="form__input"
         type="tel"
         name="phone"
         placeholder="Phone"
+        aria-label="Phone"
+        :value="formData.phone"
       />
     </div>
     <div class="form__input-wrapper form__input-wrapper--message">
       <textarea
-        :value="formData.message"
         class="form__input"
         name="message"
         placeholder="Your Message"
+        aria-label="Your Message"
+        :value="formData.message"
         @input="validateOnChange"
       />
       <FormError :show="errors.message">{{ errors.message }}</FormError>
