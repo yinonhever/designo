@@ -95,7 +95,6 @@ export default {
 
       if (this.isFormValid) {
         this.$emit("success");
-        console.log(this.formData);
         this.resetForm();
       }
     },
