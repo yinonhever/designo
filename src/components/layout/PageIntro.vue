@@ -7,7 +7,10 @@
           {{ text }}
         </p>
       </div>
-      <TheContactForm v-if="showContactForm" />
+      <TheContactForm
+        v-if="showContactForm"
+        @success="$emit('form-submitted')"
+      />
       <picture v-else-if="img">
         <source
           :srcset="img.tablet"

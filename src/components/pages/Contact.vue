@@ -1,16 +1,23 @@
 <template>
   <Page title="Contact" id="contact">
-    <PageIntro page="contact" :title="title" :text="introText" />
+    <PageIntro
+      page="contact"
+      :title="title"
+      :text="introText"
+      @form-submitted="openModal"
+    />
     <LocationLinks showBgImg />
+    <SuccessModal :active="showSuccessModal" @closed="closeModal" />
   </Page>
 </template>
 
 <script>
 import PageIntro from "../layout/PageIntro";
 import LocationLinks from "../layout/LocationLinks";
+import SuccessModal from "../UI/SuccessModal";
 
 export default {
-  components: { PageIntro, LocationLinks },
+  components: { PageIntro, LocationLinks, SuccessModal },
   data() {
     return {
       title: "Contact Us",
@@ -20,6 +27,14 @@ export default {
       `,
       showSuccessModal: false,
     };
+  },
+  methods: {
+    openModal() {
+      this.showSuccessModal = true;
+    },
+    closeModal() {
+      this.showSuccessModal = false;
+    },
   },
 };
 </script>
