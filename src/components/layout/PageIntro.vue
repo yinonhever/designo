@@ -30,6 +30,7 @@ import TheForm from "../UI/TheForm";
 export default {
   components: { TheForm },
   props: ["page", "title", "text"],
+  emits: ["form-submitted"],
   computed: {
     classes() {
       return this.page === "contact"

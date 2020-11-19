@@ -1,7 +1,7 @@
 <template>
   <main :id="id">
     <slot />
-    <CTA v-if="showCTA" />
+    <CTA v-if="showCTA" ref="cta" />
   </main>
 </template>
 

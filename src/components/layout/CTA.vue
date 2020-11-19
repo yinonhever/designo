@@ -24,17 +24,22 @@
 
 <script>
 export default {
-  mounted() {
-    const adjustPlacement = () => {
+  methods: {
+    adjustPlacement() {
       const ctaSection = this.$refs.cta;
       if (ctaSection && window.innerWidth < 600) {
         ctaSection.style.marginBottom = `-${ctaSection.offsetHeight / 2}px`;
       } else {
         ctaSection.style.marginBottom = null;
       }
-    };
-    adjustPlacement();
-    window.addEventListener("resize", adjustPlacement);
+    },
+  },
+  mounted() {
+    this.adjustPlacement();
+    window.addEventListener("resize", this.adjustPlacement);
+  },
+  beforeUnmount() {
+    window.removeEventListener("resize", this.adjustPlacement);
   },
 };
 </script>
