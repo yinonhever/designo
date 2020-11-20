@@ -1,5 +1,5 @@
 <template>
-  <section class="cta" id="cta" ref="cta">
+  <section class="cta" ref="cta">
     <div class="container container--strong cta__container">
       <img
         class="cta__bg"
