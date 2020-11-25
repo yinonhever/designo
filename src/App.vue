@@ -19,8 +19,6 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap");
-
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
